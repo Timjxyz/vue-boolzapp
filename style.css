@@ -1,0 +1,243 @@
+/* Regole generali */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: 100vh;
+    background: linear-gradient(180deg, #1d9688 15%, #dbdbd4 15%);
+}
+
+.container{
+    max-width: 1000px;
+    width: 80%;
+    height: calc( 100vh - 20px);
+    margin: 0px auto;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+
+/* Regole sui display */
+.d-flex{
+    display: flex;
+}
+
+.d-active{
+    display: block;
+}
+.d-none{
+    display: none;
+}
+
+
+
+
+.fa-solid{
+    font-size: 26px;
+}
+.ms-circle{
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background-color: #fff;
+    text-align: center;
+    line-height: 52px;
+
+}
+.top img{
+    height: 50px;
+    border-radius:50% ;
+    margin-right: 10px;
+}
+
+i{
+    color: gray;
+}
+.clearfix{
+    display: table;
+    content: "";
+    clear:both
+}
+/* Parte sinistra della pagina */
+.left-section{
+    width: 40%;
+    height: 100%;
+    border-right: 1px solid gray;
+    background-color: #fff;
+    min-width: 340px;
+   
+}
+
+/* Parte superiore */
+.top-left{
+    height: 70px;
+    background-color:#d4d3d3;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+
+.user{
+    align-items: center;
+    
+}
+
+.utility{
+    width: 130px;
+    justify-content: space-around;
+   
+}
+
+/* Sezione notifiche */
+.notification{
+    background-color: #8edafc;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    color: #8edafc;
+}
+.text-notify{
+    margin-left: 20px;
+    color: #000;
+}
+.text-notify a{
+    color: gray;
+
+}
+
+/* Sezione ricerca */
+.serch{
+    position: relative;
+    padding: 10px;
+    align-items: center;
+}
+.serch input{
+    width: 100%;
+    height: 40px;
+    padding-left: 40px;
+}
+.icon-serch{
+    position: absolute;
+    left: 15px;
+    
+}
+
+/* Sezione dei contatti */
+.contacts{
+    height: calc(100% - 180px);
+    overflow-y:auto ;
+}
+.contacts img{
+    border-radius: 50%;
+    height: 50px;
+}
+
+.contacts ul li{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-top: 1px solid lightgray;
+}
+
+.contacts ul li:hover{
+    background-color: lightgray;
+    cursor: pointer;
+}
+
+.contact-text{
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.date{
+   align-self: flex-start;
+}
+
+
+
+
+/* Parte destra della pagina */
+
+.right-section{
+    width: 60%;
+    
+}
+
+.top-right{
+    height: 70px;
+    background-color:#d4d3d3;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px;
+   
+}
+.active-text-contact{
+    flex-wrap: wrap;
+    width: 50%;
+}
+
+/* Sezione centrale con finestra dei messaggi */
+.message-window{
+    background-image:url('img/mine.jpg');
+    height: calc( 100% - 140px);
+    padding: 50px;
+    width: 100%;
+}
+
+.send{
+    width: 100%;
+}
+.message-window .text-send{
+    background-color: #d5f9ba;
+    width: 250px;
+    border-radius:10px ;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    float: right;
+}
+.recived{
+    width: 100%;
+}
+.message-window .text-recived{
+    background-color: #fff;
+    width: 250px;
+    border-radius:10px ;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    float: left;
+    
+}
+
+/* Sezione inferiore dove digitare testo messaggi */
+.type-message{
+    height: 70px;
+    background-color: #f3eeea;
+    justify-content: space-around;
+   
+}
+
+.type-message input{
+    width: 80%;
+    height:calc(100%-20px);
+    margin: 10px 0px;
+    border-radius: 10px;
+    border: 0px;
+    font-size: 20px;
+}
+.type-message i{
+    font-size: 26px;
+    line-height: 70px;
+}
+
