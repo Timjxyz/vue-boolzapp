@@ -102,8 +102,6 @@ const root= new Vue({
     },
     methods:{
         
-        
-
         profiloActive:function(index){
             this.active=index;
         },

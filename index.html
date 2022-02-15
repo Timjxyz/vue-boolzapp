@@ -88,15 +88,15 @@
                 <section class="message-window">
                     <!-- Messaggi inviati -->
                     <div class="send clearfix">
-                        <div class="text-send" >
-                           <span>TESTO</span> 
+                        <div :class="message.text-send? 'text-send' :text-recived" class="text-send" v-for="(message,index) in contacts[active].messages" >
+                           <span>{{message.text}}</span> 
                             <div class="date-message">10/01/2020 15:30:55</div>
                         </div>
                     </div>
 
                     <div class="received clearfix">
-                        <div class="text-recived">
-                            <span>Hai portato a spasso il cane? vvvvvvvvvvv akkkkkkkk ajjjjjjjj</span> 
+                        <div class="text-recived" v-for="(message,index) in contacts[active].messages">
+                            <span :class="message.sent? 'sent' :recived">{{message.text}}</span> 
                             <div class="date-message">10/01/2020 15:30:55</div>                     
                         </div>
                     </div>
