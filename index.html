@@ -87,7 +87,7 @@
                 <!-- Sezione con visualizzazione dei messaggi -->
                 <section class="message-window">
                     <!-- Messaggi inviati -->
-                    <div class="send clearfix">
+                    <div class="message clearfix">
                         <div :class="message.text-send ? 'text-send' : 'text-received'" v-for="(message,index) in contacts[active].messages" >
                            <span>{{message.text}}</span> 
                             <div class="date-message">10/01/2020 15:30:55</div>

@@ -224,7 +224,7 @@ i{
     overflow-y: auto;
 }
 
-.send{
+.message{
     width: 100%;
 }
 .message-window .text-send{
@@ -236,9 +236,7 @@ i{
     text-align: center;
     float: right;
 }
-.recived{
-    width: 100%;
-}
+
 .message-window .text-recived{
     background-color: #fff;
     width: 250px;
