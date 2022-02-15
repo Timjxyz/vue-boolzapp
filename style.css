@@ -227,7 +227,7 @@ i{
 .message{
     width: 100%;
 }
-.message-window .text-send{
+.message-window .text-sent{
     background-color: #d5f9ba;
     width: 250px;
     border-radius:10px ;
