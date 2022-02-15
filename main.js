@@ -2,6 +2,7 @@ const root= new Vue({
     el:'#app',
 
     data:{
+        newMessage:'',
         active:0,
         contacts: [
             {
@@ -105,6 +106,24 @@ const root= new Vue({
         profiloActive:function(index){
             this.active=index;
         },
+
+        addMessage(){
+            
+            if(this.newMessage.trim().length>0){
+        
+                const newMessageOggetto={
+                    date:'10/01/2020 15:50:00',
+                    text:this.newMessage.trim(),
+                    status: 'sent',
+                }
+                this.contacts.push(newMessageOggetto);
+                this.newMessage='';
+        
+            }
+        
+            
+        },
+        
     }
    
 });
