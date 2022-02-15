@@ -2,12 +2,12 @@ const root= new Vue({
     el:'#app',
 
     data:{
-        
+        active:0,
         contacts: [
             {
                 //First contact
                 name: 'Michele',
-                avatar: 'img/avatar_1.jpg',
+                avatar: '_1',
                 visible: true,
                 messages: [
                     {
@@ -31,7 +31,7 @@ const root= new Vue({
             {
                 //Second contact
                 name: 'Fabio',
-                avatar: 'img/avatar_2.jpg',
+                avatar: '_2',
                 visible: true,
                 messages: [
                     {
@@ -55,7 +55,7 @@ const root= new Vue({
             {
                 //third contact
                 name: 'Samuele',
-                avatar: 'img/avatar_3.jpg',
+                avatar: '_3',
                 visible: true,
                 messages: [
                     {
@@ -81,7 +81,7 @@ const root= new Vue({
             {
                 //Fourth contact
                 name: 'Luisa',
-                avatar: 'img/avatar_6.jpg',
+                avatar: '_6',
                 visible: true,
                 messages: [
                     {
@@ -101,9 +101,12 @@ const root= new Vue({
             ]
     },
     methods:{
-        profiloActive(){
-            
-        }
+        
+        
+
+        profiloActive:function(index){
+            this.active=index;
+        },
     }
    
 });

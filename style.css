@@ -70,6 +70,8 @@ i{
     border-right: 1px solid gray;
     background-color: #fff;
     min-width: 340px;
+    display: flex;
+    flex-direction: column;
    
 }
 
@@ -122,6 +124,9 @@ i{
     width: 100%;
     height: 40px;
     padding-left: 40px;
+    color: #b1b1b1;
+    border-radius: 5px;
+    border: 1px solid #b1b1b1;
 }
 .icon-serch{
     position: absolute;
@@ -131,24 +136,34 @@ i{
 
 /* Sezione dei contatti */
 .contacts{
-    height: calc(100% - 180px);
+    flex-grow: 1;
     overflow-y:auto ;
+    border-right: 1px solid lightgray;
+    width: 95%;
+   
 }
 .contacts img{
     border-radius: 50%;
     height: 50px;
 }
-
+.contacts ul{
+    
+    height: 300px;
+    margin-right: 20px;
+    width: 100%;
+}
 .contacts ul li{
     display: flex;
-    width: 100%;
     align-items: center;
     justify-content: space-between;
     padding: 10px;
     border-top: 1px solid lightgray;
+    position: relative;
+    padding-top: 5px;
+    
 }
 
-.contacts ul li:hover{
+.contacts ul li .active, .active:hover{
     background-color: lightgray;
     cursor: pointer;
 }
@@ -156,11 +171,25 @@ i{
 .contact-text{
     margin-left: 20px;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+}
+.contact-text p{
+    color: gray;
+    overflow:hidden; 
+    white-space:nowrap; 
+    text-overflow: ellipsis;
+    width: 23ch;
 }
 
 .date{
-   align-self: flex-start;
+   position: absolute;
+   color: gray;
+   font-size: 14px;
+   width: 50%;
+   right: 10px;
+   top: 0;
+   text-align: end;
+   padding-top: 10px;
 }
 
 
@@ -170,7 +199,7 @@ i{
 
 .right-section{
     width: 60%;
-    
+    min-width: 500px;
 }
 
 .top-right{
@@ -192,6 +221,7 @@ i{
     height: calc( 100% - 140px);
     padding: 50px;
     width: 100%;
+    overflow-y: auto;
 }
 
 .send{
@@ -218,6 +248,12 @@ i{
     text-align: center;
     float: left;
     
+}
+.date-message{
+    text-align: right;
+    font-size: 12px;
+    color: gray;
+    padding-top: 20px;
 }
 
 /* Sezione inferiore dove digitare testo messaggi */
