@@ -56,7 +56,7 @@
                                     <h3>{{contact.name}}</h3>
                                     <p  >{{contact.messages[contact.messages.length - 1].text}}</p>
                                 </div>
-                                <div class="date">10/01/2020 15:30:55</div>
+                                <div class="date">{{contact.messages[contact.messages.length - 1].date}}</div>
                             </div>
                         </li>
                     </ul>
@@ -90,7 +90,7 @@
                     <div class="message clearfix">
                         <div :class="(message.status=='sent') ? 'text-sent' : 'text-recived'" v-for="(message,index) in contacts[active].messages" >
                            <span>{{message.text}}</span> 
-                            <div class="date-message">10/01/2020 15:30:55</div>
+                            <div class="date-message">{{message.date}}</div>
                         </div>
                     </div>
 
@@ -101,7 +101,7 @@
                 <!-- Sezione con input per digitare messaggi -->
                 <section class="type-message d-flex">
                     <i class="fa-regular fa-face-smile"></i>
-                    <input type="text" @keyup.enter="addMessage">
+                    <input type="text" @keyup.enter="addMessage()">
                     <i class="fa-solid fa-microphone"></i>
                 </section>
             </section>

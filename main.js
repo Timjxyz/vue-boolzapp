@@ -116,7 +116,8 @@ const root= new Vue({
                     text:this.newMessage.trim(),
                     status: 'sent',
                 }
-                this.contacts.push(newMessageOggetto);
+                this.active=index;
+                this.contacts[index].messages.push(newMessageOggetto);
                 this.newMessage='';
         
             }
