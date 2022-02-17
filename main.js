@@ -4,6 +4,7 @@ const root= new Vue({
     data:{
         newMessage:'',
         active:0,
+        ricercaText:'',
         contacts: [
             {
                 //First contact
@@ -110,19 +111,41 @@ const root= new Vue({
         addMessage(){
             
             if(this.newMessage.trim().length>0){
+                
         
                 const newMessageOggetto={
-                    date:'10/01/2020 15:50:00',
+                    date:dayjs().format('DD/MM/YYYY HH:mm:ss'),
                     text:this.newMessage.trim(),
                     status: 'sent',
                 }
-                this.active=index;
-                this.contacts[index].messages.push(newMessageOggetto);
+                this.contacts[this.active].messages.push(newMessageOggetto);
                 this.newMessage='';
-        
+                
             }
+
+            const newMessageReplay={
+                date:dayjs().format('DD/MM/YYYY HH:mm:ss'),
+                text:'ok',
+                status: 'received',
+            }
+
+            
+
+            setTimeout(()=>{
+                this.contacts[this.active].messages.push(newMessageReplay)
+            },1000);
         
             
+        },
+
+        serchContact(){
+            this.contacts.forEach((element)=>{
+                if(element.name.toLowerCase().includes(this.ricercaText.toLowerCase())){
+                    element.visible=true;
+                }else{
+                    element.visible=false;
+                }
+            });
         },
         
     }
